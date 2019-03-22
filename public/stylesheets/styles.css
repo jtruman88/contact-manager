@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #177F20;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  margin: 0 auto 20px auto;
+  width: 800px;
+}
+
+section.head {
+  background: rgba(23, 127, 32, 0.3);
+  border: 1px solid rgba(187, 194, 193, 0.6);
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#container {
+  margin: 20px auto 0 auto;
+  width: 550px;
+}
+
+#container .btn {
+  margin-right: 240px;
+}
+
+.btn,
+fieldset input[type="submit"] {
+  border: 1px solid #177F20;
+  border-radius: 6px;
+  color: #177F20;
+  font-weight: bold;
+  padding: 10px 8px;
+  text-decoration: none;
+}
+
+.btn:hover,
+fieldset input[type="submit"]:hover {
+  background: #177F20;
+  color: #fff;
+  cursor: pointer;
+}
+
+.head a + form {
+  display: inline-block;
+}
+
+.head form input {
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.head .tags {
+  color: #177F20;
+  font-weight: bold;
+  text-align: center;
+}
+
+.none {
+  background: rgba(23, 127, 32, 0.3);
+  border: 1px solid rgba(187, 194, 193, 0.6);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+section.none a.btn {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  border-bottom: 1px solid rgba(23, 127, 32, 0.3);
+  display: inline-block;
+  padding-bottom: 20px;
+  width: 260px;
+}
+
+dt {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+dd {
+  margin: 0 0 5px 0;
+}
+
+li .edit,
+li .delete {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+}
+
+footer {
+  border-top: 1px solid rgba(23, 127, 32, 0.3);
+  margin: 0 auto;
+  text-align: center;
+  width: 800px;
+}
+
+main > h2 {
+  border-bottom: 1px solid rgba(23, 127, 32, 0.3);
+  padding-bottom: 15px;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+ fieldset {
+  border: none;
+}
+
+fieldset label {
+  display: inline-block;
+  margin-right: 20px;
+  text-align: right;
+  width: 150px;
+}
+
+fieldset input[type="text"] {
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px;
+  width: 300px;
+}
+
+fieldset:last-of-type {
+  margin-left: 175px;
+}
+
+fieldset input[type="submit"] {
+  margin-right: 15px;
+}
+
+fieldset input[type="submit"],
+fieldset a.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  width: 140px;
+}

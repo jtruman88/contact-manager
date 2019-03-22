@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Manager</title>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <script type="text/javascript" src="/javascripts/jquery.js"></script>
+  <script type="text/javascript" src="/javascripts/handlebars.js"></script>
+  <script type="text/javascript" src="/javascripts/contacts.js"></script>
+</head>
+<body>
+  <header>
+    <h1><a href="#" class="main">Contact Manager</a></h1>
+  </header>
+  <main>
+  </main>
+  <footer>
+    <p>Developed by Jaron Truman and <a href="https://www.launchschool.com" target="_blank">Launch School</a></p>
+  </footer>
+  
+  <script type="text/x-handlebars" id="add_search">
+    <section class="head">
+      <div id="container">
+        <a href="#" class="btn">Add Contact</a>
+        <form action="/api/contacts" method="get">
+          <input type="text" name="q" placeholder="Search">
+        </form>
+      </div>
+      <h2>Filter by Tags:</h2>
+      <form class="tags" action="#">
+      </form>
+    </section>
+  </script>
+  <script type="text/x-handlebars" id="no_contacts">
+    <section class="none">
+      <h2>There are no contacts</h2>
+      <a href="#" class="btn">Add Contact</a>
+    </section>
+  </script>
+  <script type="text/x-handlebars" data-type="partial" id="contact">
+    <li>
+      <h3>{{full_name}}</h3>
+      <dl>
+        <dt>Phone Number:</dt>
+        <dd>{{phone_number}}</dd>
+        <dt>Email:</dt>
+        <dd>{{email}}</dd>
+        <dt>Tags:</dt>
+        <dd>{{tags}}</dd>
+      </dl>
+      <div>
+        <a href="#" data-id="{{id}}" class="btn edit">Edit</a>
+        <a href="#" data-id="{{id}}" class="btn delete">Delete</a>
+      </div>
+    </li>
+  </script>
+  <script type="text/x-handlebars" id="contacts">
+    <ul>
+      {{#each contacts}}
+        {{> contact}}
+      {{/each}}
+    </ul>
+  </script>
+  <script type="text/x-handlebars" id="create_contact">
+    <h2>Create Contact</h2>
+    <form action="/api/contacts" method="post" class="contact-info">
+      <fieldset>
+        <label for="full_name">Full name: </label>
+        <input type="text" name="full_name" required>
+      </fieldset>
+      <fieldset>
+        <label for="email">Email Address: </label>
+        <input type="text" name="email" required>
+      </fieldset>
+      <fieldset>
+        <label for="phone_number">Phone Number: </label>
+        <input type="text" name="phone_number" required>
+      </fieldset>
+      <fieldset>
+        <label for="tags">Tags: </label>
+        <input type="text" name="tags" placeholder="i.e. work, friends, family, etc.">
+      </fieldset>
+      <fieldset>
+        <input type="submit">
+        <a href="#" class="btn main">Cancel</a>
+      </fieldset>
+    </form>
+  </script>
+  <script type="text/x-handlebars" id="edit_contact">
+    <h2>Edit Contact</h2>
+    <form action="/api/contacts/{{id}}" method="put" class="contact-info">
+      <fieldset>
+        <label for="full_name">Full name: </label>
+        <input type="text" name="full_name" value="{{full_name}}" required>
+      </fieldset>
+      <fieldset>
+        <label for="email">Email Address: </label>
+        <input type="text" name="email" value="{{email}}" required>
+      </fieldset>
+      <fieldset>
+        <label for="phone_number">Phone Number: </label>
+        <input type="text" name="phone_number" value="{{phone_number}}" required>
+      </fieldset>
+      <fieldset>
+        <label for="tags">Tags: </label>
+        <input type="text" name="tags" value="{{tags}}" placeholder="i.e. work, friends, family, etc.">
+      </fieldset>
+      <fieldset>
+        <input type="submit">
+        <a href="#" class="btn main">Cancel</a>
+      </fieldset>
+    </form>
+  </script>
+  <script type="text/x-handlebars" id="tags">
+    {{#each tags}}
+      <label><input type="checkbox" name="tag" value="{{.}}"> {{.}}</label>
+    {{/each}}
+  </script>
+</body>
+</html>
