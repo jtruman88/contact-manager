@@ -1,1 +1,3 @@
-# contact-manager
+# Contact Manager
+
+An assessment project during
