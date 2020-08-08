@@ -19,7 +19,8 @@ GEM
     erubi (1.7.0)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
-    kramdown (1.15.0)
+    kramdown (2.3.0)
+      rexml
     minitest (5.10.3)
     multi_json (1.12.2)
     mustermann (1.0.1)
@@ -31,6 +32,7 @@ GEM
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
     rake (12.2.1)
+    rexml (3.2.4)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
